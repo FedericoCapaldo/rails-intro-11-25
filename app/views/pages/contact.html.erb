@@ -1,6 +1,16 @@
 <h1>Contacts</h1>
 
 <h2>Meet our team</h2>
+
+<form action="/contact" method="get">
+  <%# for attribute of a label matches id of an input in the form  %>
+  <label for="member">Who are you looking for?</label>
+  <%# name attribute is what the param is going to be called in our request %>
+  <input id="member" type="text" name="member">
+
+  <input type="submit">
+</form>
+
 <ol>
   <% @members.each do |member| %>
     <li><%= member.capitalize %></li>
